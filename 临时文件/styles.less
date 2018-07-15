@@ -1,0 +1,67 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+// style the background color of the tree view
+.tree-view {
+    // background-color: whitesmoke;
+  // background-color: black;
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  // color: white;
+  // background-color: hsl(180, 24%, 12%);
+  background-color: rgb(5,5,5);
+}
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+  // border-color: red;
+}
+
+// .status-bar {
+//   color: white;
+//   background-color: black;
+// }
+
+/* 评论内容 */
+.line .null .syntax--comment{
+    color: rgb(80,80,80);
+}
+
+/* 行数条 */
+atom-text-editor .line-number .icon-right{
+    padding: 0 0.1rem;
+}
+atom-text-editor .gutter{
+    max-width: 40px;
+}
+
+/*左侧数字大小和行高(不能随意调节字体大小)*/
+atom-text-editor .gutter .line-number{
+    font-size: 12px;
+    line-height: 19px;
+}
+
+/*滚动条*/
+.scrollbars-visible-always atom-text-editor ::-webkit-scrollbar-thumb{
+    background-color: rgb(176, 218, 228);
+}
+.scrollbars-visible-always atom-text-editor ::-webkit-scrollbar-thumb{
+    width: 4px;
+    height: 30px;
+}
