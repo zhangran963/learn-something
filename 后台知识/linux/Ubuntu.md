@@ -33,3 +33,8 @@
 * 再次输入root新密码
 * `su - root`: 切换成 root 用户状态;
 
+
+### 新建删除等
+* `rm xxx`删除文件
+* `rmdir xxx`删除空文件夹
+* `mkdir xxx`新建文件夹
