@@ -38,3 +38,20 @@
 * `rm xxx`删除文件
 * `rmdir xxx`删除空文件夹
 * `mkdir xxx`新建文件夹
+
+
+### 下载远程文件
+* `scp -P 29707 root@162.219.125.154:/root/www/hello/index.css /Users/ran/Desktop`
+* `scp -P 端口号 登录名@域名或IP:远程文件地址 本地地址`
+
+### 下载远程文件夹
+* `scp -P 29707 -r root@162.219.125.154:/root/www/ /Users/ran/Desktop`
+* `scp -P 端口号 -r 登录名@域名或IP:远程文件夹地址 本地地址`
+
+### 远程上传文件
+* `scp -P 29707 /Users/ran/Desktop/pic.png root@162.219.125.154:/root/`
+* `scp -P 端口号 本地文件地址 登录名@域名或IP:远程地址`
+
+### 远程上传文件夹
+* `scp -P 29707 -r /Users/ran/Desktop/find root@162.219.125.154:/root/`
+* `scp -P 端口号 -r 本地文件夹地址 登录名@域名或IP:远程地址`
