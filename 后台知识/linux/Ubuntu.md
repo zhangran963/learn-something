@@ -55,3 +55,8 @@
 ### 远程上传文件夹
 * `scp -P 29707 -r /Users/ran/Desktop/find root@162.219.125.154:/root/`
 * `scp -P 端口号 -r 本地文件夹地址 登录名@域名或IP:远程地址`
+
+
+### 用户
+* `/root`: root 用户的地址;
+* `/home/ran`: 普通用户的地址;

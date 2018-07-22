@@ -1,3 +1,7 @@
+# npm 路径
+* `/usr/local/lib/node_modules`: 全局npm包安装的位置;
+* `npm uninstall 包名称 -g`: 删除全局包(清除此包的文件夹);
+
 
 * `npm config get prefix` 获取路径(用cnpm时用`cnpm config get prefix`);
 
