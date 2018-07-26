@@ -6,6 +6,13 @@
 4. `(kW69gf4]]uLJcKx` 输入密码;
 5. `exit` 退出;
 
+
+### 查看登录用户进程
+1. `ps aux |grep sshd`列出列表;
+2. `kill xxx`清除进程数;
+
+
+
 ### 清除旧ssh信息
 `ssh-keygen -R 远程服务器IP地址`,如有类似"ECDSA host key for 45.76.14.160 has changed and you have requested strict checking"的提示时, 是因为远程服务器更新过系统,需要清除本地缓存的旧的登录信息;
 
@@ -29,7 +36,7 @@
 * 在普通用户下
 * `sudo passwd root`: 更改 root 密码
 * 输入普通用户密码
-* 输入root新密码
+* 输入root新密码o
 * 再次输入root新密码
 * `su - root`: 切换成 root 用户状态;
 
@@ -38,6 +45,23 @@
 * `rm xxx`删除文件
 * `rmdir xxx`删除空文件夹
 * `mkdir xxx`新建文件夹
+* `rm xxx` 删除文件/文件夹
+* `rm -rf xxx`强制删除文件/文件夹(无提示)
+* `touch xxx`新建xxx文件 或 更新文件创建时间(默认);
+* `getconf LONG_BIT`查看系统版本数;
+
+
+### 移动/复制等
+* `mv 文件或文件夹 目标文件夹`: 移动文件或文件夹到其他文件夹;
+* `cp -r 文件夹 目标文件夹`: 复制文件夹到目标文件夹;
+* `cp 文件名 目标文件夹`: 复制文件到目标文件夹;
+
+
+
+### 解压缩
+`tar -zxvf 文件名`: 解压缩文件名为文件夹
+
+
 
 
 ### 下载远程文件
@@ -60,3 +84,7 @@
 ### 用户
 * `/root`: root 用户的地址;
 * `/home/ran`: 普通用户的地址;
+
+### 授予权限
+* `chmod 777 文件夹/文件路径`: 给目标授予权限
+

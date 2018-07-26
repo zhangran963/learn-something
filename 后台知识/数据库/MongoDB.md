@@ -1,3 +1,10 @@
+### 安装
+> 1. `wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-amazon2-4.0.0.tgz` 下载 mongodb 压缩文件;
+2. `tar -xzvf 压缩文件名` 解压;
+3. 运行
+
+
+
 `db.dropDatabase()` 删除数据库
 
 show dbs //显示数据库
@@ -6,6 +13,7 @@ show collections  //显示当前数据库的集合
 
 **启动**
 > `mongod --dbpath e:\data\db`
+> `/usr/local/Cellar/mongodb/4.0.0/bin/mongod --dbpath /Users/ran/Public/data` 执行 mongodb 文件夹下的命令, 指定数据库存在的文件夹
 
 载入数据文件
 > `mongoimport --db test --collection restaurants --drop --file primer-dataset.json`
