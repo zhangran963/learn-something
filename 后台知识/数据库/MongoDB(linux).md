@@ -79,3 +79,4 @@ auth=true
 * `show collections`: 显示集合列表;
 * `db.createCollections(名称)`: 创建集合;
 * `db.books.drop`: 删除 books 这个集合;
+

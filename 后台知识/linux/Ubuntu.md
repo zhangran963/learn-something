@@ -5,6 +5,7 @@
 3. `yes` 输入一次yes;
 4. `(kW69gf4]]uLJcKx` 输入密码;
 5. `exit` 退出;
+7. `ssh-copy-id -i ~/.ssh/id_rsa.pub root@162.219.125.154 -p 29707`: 免密码登录, 把登录机的 id_rsa.pub 文件上传到 远程机;
 
 
 ### 查看登录用户进程
