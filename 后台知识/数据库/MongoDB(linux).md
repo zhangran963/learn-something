@@ -59,10 +59,23 @@ auth=true
 * `db.auth('root', '7')`: 验证刚才创建的用户;
 * `db.createUser({user:'ran', pwd:'7', roles: [{role: 'readWrite', db: 'config'}]})`: 为某一个库添加用户并分配权限;
 
+* `db.addUser("java","java")`: 修改用户密码;
+* `db.system.users.find()`: 查看所有用户;
+
 
 ### 常用命令
+1. 用户
+* `show users`: 显示用户;
+
+2. 数据库
 * `use xxx`: 切换/创建 xxx 数据库;
 * `show dbs`: 显示数据库列表;
-* `show collections`: 显示集合列表;
-* `show users`: 显示用户;
+* `db`: 当前数据库;
+* `db.dropDatabase()` 删除数据库;
 * `db.help()`: 显示更多命令;
+
+3. 集合
+* `db.books.insert({"name": "siyecao"})`: 在当前数据库的 books集合(没有就创建) 中插入数据;
+* `show collections`: 显示集合列表;
+* `db.createCollections(名称)`: 创建集合;
+* `db.books.drop`: 删除 books 这个集合;
