@@ -1,3 +1,7 @@
+[文章链接](https://blog.csdn.net/u012758088/article/details/78598894)
+
+
+# linux 安装 mongodb
 1. `wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1604-4.0.0.tgz`: 下载 mongodb 安装包;
 2. `tar -zxvf mongodb-linux-x86_64-3.4.10.tgz`解压此安装包;
 3. `mkdir db`: 创建个文件夹用于存数据;
@@ -26,3 +30,39 @@ auth=true
 ```
 8. `./mongodb-server/bin/mongod --config /root/my/mongodb-server/mongodb.conf`: 通过配置文件启动 mongodb;
 9. `lsof -i :27017`: 查看27017端口的是不是 mongodb;
+
+10. (做成系统服务, 开机自动启动)...
+
+
+
+
+
+
+
+### shell 下进入 mongodb
+* 启动 mongodb;
+* `./bin/mongo`: 进入 shell(此时不带 auth 认证), 很多操作不能做;
+* `use admin`: (不知道干啥了))
+* `db.auth(用户名, 密码)`: 用某个用户登录;
+
+
+
+
+### 关闭 mongodb
+* `ps -axu|grep mongo`: 查询 mongodb 的进程数;
+* `kill -2 pid数`: 关闭;
+
+
+### 设置用户
+* `use admin`: 切换库;
+* `db.createUser({user: 'root', pwd: '7', roles: ['root']})`: 创建用户密码权限等;
+* `db.auth('root', '7')`: 验证刚才创建的用户;
+* `db.createUser({user:'ran', pwd:'7', roles: [{role: 'readWrite', db: 'config'}]})`: 为某一个库添加用户并分配权限;
+
+
+### 常用命令
+* `use xxx`: 切换/创建 xxx 数据库;
+* `show dbs`: 显示数据库列表;
+* `show collections`: 显示集合列表;
+* `show users`: 显示用户;
+* `db.help()`: 显示更多命令;
