@@ -12,6 +12,10 @@
 1. `ps aux |grep sshd`列出列表;
 2. `kill xxx`清除进程数;
 
+### 查看服务进程
+1. `ps -ef|grep node`: 查看 node进程;
+2. `kill pid号`: 停止此进程;
+
 
 
 ### 清除旧ssh信息

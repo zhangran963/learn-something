@@ -1,2 +1,27 @@
 ### 启动
 `node xxx.js`
+
+### 引入
+* 引入 koa, 开启简单服务;
+```
+const Koa = require('koa');
+const app = new Koa();
+
+app.use(async (ctx, next) => {
+    ctx.response.body = "没有你以后, 一个人四处旅游, 以后的以后, 我钱着别人衣袖, 若是有缘再见, 也会笑着问候";
+});
+
+app.listen(3000);
+```
+
+* `ctx.request.url`: 域名后面的路径;
+* `decodeURIComponent(ctx.request.url)`: 解析转码的url内容;
+* `ctx.request.accepts('mp5')`: 判断 req 是否支持 'mp5';
+    * 支持, 返回'mp5';
+    * 不支持, 返回 false ;
+
+* `ctx.response.type`: 网页数据类型;
+    * `text` => `text/plain`: 文本;
+    * `html` => `text/html`: html结构;
+    * `xml` => `application/xml`: xml结构;
+    * `json` => `application/json`: json结构;
