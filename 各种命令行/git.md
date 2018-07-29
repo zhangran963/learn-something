@@ -103,6 +103,10 @@
 
 `git merge --abort`取消合并;
 
+### 清除本地
+* `git clean -df`: 清除本地未提交的更改;
+* `git reset --hard`: 清除本地已提交的更改;
+
 
 ### rebase 模式合并
 * 普通合并用 merge 形式, 有分支;
