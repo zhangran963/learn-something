@@ -133,6 +133,7 @@
 
 ### 关联远程仓库
 1. `git remote add origin 你的远程库地址`关联到远程库
+2. `git remote -v`: 查看关联的远程仓库地址
 
 ### 上传
 1. `git add xxx` 先保存(缓存);
