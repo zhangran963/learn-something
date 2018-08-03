@@ -35,3 +35,28 @@ flex多行布局
     * `stretch`: "行"占满高度, 左对齐;
     * `space-between`: "行"两段对齐, 左对齐;
     * `space-around`: "行"平均分布对齐, 左对齐; 
+
+
+### 两端对齐(多行)
+```
+p{
+    text-align:justify;
+    text-align-last:justify;
+}
+```
+
+### 两端对齐(单行)
+```
+p{
+    text-align:justify;
+    text-align-last:justify;
+    height:24px;
+}
+p:after{
+    display:inline-block;
+    content:'';
+    overflow:hidden;
+    width:100%;
+    height:0;
+}
+```
