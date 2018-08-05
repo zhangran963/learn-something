@@ -1,0 +1,13 @@
+### 启动/关闭 服务
+* `pm2 start 服务文件`: 开启服务 app.js
+* `pm2 start 服务文件 --name "server"`: 开启服务(叫 server)
+* `pm2 stop 服务名`: 关闭 某个服务;
+* `pm2 restart 服务名`: 重启某个服务;
+* `pm2 delete 服务名`: 删除服务;
+
+
+
+### 进程
+* `pm2 ls`: 查看全部进程;
+* `pm2 show 号码`: 某进程详情;
+* `pm2 logs 名称`: 查看某一个进程的 log记录;
