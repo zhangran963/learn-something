@@ -11,3 +11,12 @@
 10. 此时 /usr/local/ 文件夹下有 nginx 文件夹;
     * 配置文件为conf目录下的nginx.conf;
     * 启动文件在sbin目录下的nginx文件;
+11. 此时本机访问 162.219.125.154:80 应该会有 nginx 的内容;
+
+
+
+### 403 Forbiden
+* 以下情况都有可能:
+    * 配置文件顶部`#user  nobody;`改为`user root`或`user ran`;
+    * 文件夹处改权限`chmod -R 777 /root/web-static`;
+    * 保证文件夹下有对应的`index.html`;
