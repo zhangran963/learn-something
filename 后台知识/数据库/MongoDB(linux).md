@@ -42,7 +42,7 @@ auth=true
 ### shell 下进入 mongodb
 * 启动 mongodb;
 * `./bin/mongo`: 进入 shell(此时不带 auth 认证), 很多操作不能做;
-* `use admin`: (不知道干啥了))
+* `use admin`: 切换库, 不同库有不同的用户;
 * `db.auth(用户名, 密码)`: 用某个用户登录;
 
 
