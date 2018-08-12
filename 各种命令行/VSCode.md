@@ -20,3 +20,37 @@
 `cmd + o` 打开文件夹;
 `cmd + w` 关闭当前文件;
 `cmd + enter`: 另起一行;
+
+
+### 缩进4格
+1. 设置 tab 不生效的处理
+```
+"editor.detectIndentation": false,
+```
+
+2. 格式化.vue中的 `<style>` 和 `<script>` 片段;
+```
+"beautify.language": {
+    "js": {
+        "type": [
+            "javascript",
+            "json",
+            "jsonc"
+        ],
+        "filename": [
+            ".jshintrc",
+            ".jsbeautifyrc"
+        ]
+    },
+    "css": [
+        "css",
+        "scss",
+        "less"
+    ],
+    "html": [
+        "htm",
+        "html",
+        "vue"
+    ]
+}
+```

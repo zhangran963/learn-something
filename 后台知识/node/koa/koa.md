@@ -24,4 +24,19 @@ app.listen(3000);
     * `text` => `text/plain`: 文本;
     * `html` => `text/html`: html结构;
     * `xml` => `application/xml`: xml结构;
-    * `json` => `application/json`: json结构;
+    * `json` => `application/json`: json结构
+
+
+### 路径内参数
+1. 路由设置为`/read/:idn`;
+2. 请求路径`http://localhost:7777/read/110103030170?name=siyeccao`;
+* 读取到的结果: `ctx.params`:
+```
+{
+    idn: '110103030170'
+}
+```
+
+### cookie
+* `ctx.cookies.get(name, [options])`: 读取上下文请求中的cookie
+* `ctx.cookies.set(name, value, [options])` 在上下文中写入cookie

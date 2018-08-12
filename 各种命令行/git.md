@@ -61,7 +61,7 @@
 ###创建新分支
 1. `git branch xxx` 创建名为xxx的分支；
 2. `git checkout xxx` 切换到分支 xxx;
-3. `git branch -b xxx` 创建并切换到 xxx;
+3. `git checkout -b xxx` 创建并切换到 xxx;
 4. `git merge xxx` 合并“其他分支”到当前分支;
 5. `git branch`查看当前分支;
 

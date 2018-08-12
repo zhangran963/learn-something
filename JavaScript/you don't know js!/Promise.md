@@ -101,7 +101,7 @@ p.then((data)=>{
 
 ### async await
 * async 用于**函数**, 标识这个函数是异步的(一般的函数都是顺序执行完, 再执行后面的代码);
-* await 用于标识 promise 等可以等待的处理;
+* await 用于 promise 等可以等待的处理;
     * await 必须和 async 配合使用;
     * 用于 Promise时, 会同步地返回 Promise.then.then... 之后最终的结果;
     * 用于 非Promsie 时, 直接返回 后面的对象(这样好像没啥用);
