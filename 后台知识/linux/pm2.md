@@ -15,3 +15,9 @@
 * `pm2 ls`: 查看全部进程;
 * `pm2 show 号码`: 某进程详情;
 * `pm2 logs 名称`: 查看某一个进程的 log记录;
+
+
+### 日志
+* `pm2 logs 名称`: 查看某服务的console.log;
+* `pm2 logs all`: 查看全部的 console.log;
+* `pm2 flush`: 清除 console.log;
