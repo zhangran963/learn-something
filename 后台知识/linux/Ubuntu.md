@@ -47,3 +47,9 @@
 ### 授予权限
 * `chmod 777 文件夹/文件路径`: 给目标授予权限
 
+### sshd
+* 查看sshd服务的网络连接情况：`netstat -ntlp`
+* 启动服务: `systemctl start sshd.service`
+* 查看服务状态: `systemctl status sshd.service`
+* `netstat -antlp|grep sshd`
+
