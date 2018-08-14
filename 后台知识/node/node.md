@@ -8,21 +8,18 @@
 `export function cube(){}` + `export function cubee(){}` + `import {cube,cubee} from '././'` = `cube; cubee;`
 
 
-
-输出文件绝对路径  
-`__filename`
-
+### 三种文件路径  
 1. `__filename` 输出文件的绝对路径(带有文件名)`E:\nodejs\node包教不包会\node地址外.js`
-1. `__dirname` 输出文件的绝对路径(不带有文件名)`E:\nodejs\node包教不包会\lession3`
-2. `process.cwd()` 输出执行的文件的根文件路径(不带有文件名)`E:\nodejs\node包教不包会\lession3`
+2. `__dirname` 输出文件的绝对路径(不带有文件名)`E:\nodejs\node包教不包会\lession3`
+3. `process.cwd()` 输出执行的文件的 *根文件* 绝对路径(不带有文件名)`E:\nodejs\node包教不包会\lession3`
 
-RESTful的理解
+
+### RESTful的理解
 > URL定位资源，用HTTP动词（GET,POST,DELETE,DETC）描述操作
 1. GET    用来获取资源，
 2. POST  用来新建资源（也可以用于更新资源），
 3. PUT    用来更新资源，
 4. DELETE  用来删除资源。
-
 > 综合上面的解释，我们总结一下什么是RESTful架构：  
 　　（1）每一个URI代表一种资源；  
 　　（2）客户端和服务器之间，传递这种资源的某种表现层；  
@@ -33,7 +30,9 @@ manifest 文件
 配置 `<html manifest="demo.appcache"></html>` + `text/cache-manifest`(服务器配置)
 
 
-计时开始和结束标志
+### 计时开始和结束标志
+* `console.time()`: 开始计时;
+* `console.timeEnd()`: 结束计时;
 ```
 var counter = 10;
 console.log("计数：%d", counter);  //关键点1
@@ -44,7 +43,7 @@ for(var i=0;i<counter;i++){
 console.timeEnd("获取");   //关键点2，输出："获取: 0.059ms","获取"2字是一个标识符，在timeEnd处打印出来
 ```
 
-process 进程，指node执行的进程。
+### process 进程，指node执行的进程。
 1. `exit` 当进程准备退出时触发；
 2. `beforeExit`  监听器可以异步调用，这样 node 就会继续执行。
 
@@ -60,8 +59,8 @@ process 进程，指node执行的进程。
 
 `util.isError(object)` 如果给定的参数 "object" 是一个错误对象返回true，否则返回false。
 
-**文件系统**
 
+**文件系统**
 `var fs = require("fs")`
 * `fs.readFile(url,callBack)`异步读取文件,(err,data),推荐；`fs.readFileSync()`同步读取文件；
 * `fs.open(path, flags[, mode], callback)` 在异步模式下打开文件的语法格式
@@ -113,11 +112,3 @@ process 进程，指node执行的进程。
 * `fs.rmdir(path, callback)` 删除目录
 > 1.path文件路径；  
 2.callback回调函数，有参数err。
-
-**GET/POST请求**
-
-`var url = require("url");`
-
-
-
-url中包含有`"/first/:name"`此种样式，可以用`req.params.name`代表`:name`
