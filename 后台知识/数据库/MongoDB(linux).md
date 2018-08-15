@@ -78,5 +78,7 @@ auth=true
 * `db.books.insert({"name": "siyecao"})`: 在当前数据库的 books集合(没有就创建) 中插入数据;
 * `show collections`: 显示集合列表;
 * `db.createCollections(名称)`: 创建集合;
+* `db.books.remove({})`: 清空 books 集合;
 * `db.books.drop`: 删除 books 这个集合;
+
 
