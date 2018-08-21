@@ -36,3 +36,9 @@ export PATH=${PATH}:/Users/apple/Library/Android/sdk/tools
 ```
 4. 保存并关闭`.bash_profile`;
 5. `source .bash_profile`使配置生效;
+
+
+
+### 修改保存截图的默认路径
+* `defaults write com.apple.screencapture location 自定义路径`: 修改;
+* `killall SystemUIServer`: 使生效;

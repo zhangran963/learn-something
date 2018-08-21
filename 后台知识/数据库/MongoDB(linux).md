@@ -25,7 +25,7 @@ shardsvr=true
 #directorydb=true
 # 开启认证
 auth=true
-# 设置开启简单的rest API,置后打开28017网页端口
+# 设置开启简单的rest API,置后打开27017网页端口
 #rest=true
 ```
 8. `./mongodb-server/bin/mongod --config /root/my/mongodb-server/mongodb.conf`: 通过配置文件启动 mongodb;
