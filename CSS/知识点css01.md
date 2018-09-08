@@ -127,6 +127,11 @@ cubic-bezier(x1,y1,x2,y2) 相当于定义开始和结束的斜率
 动画方式：ease ease-in ease-out ease-in-out linear cubic-bezier(x1,y1,x2,y2);  
 animation-name\ animation-duration\ animation-timing-function\ animation-delay\ animation-iteration-count\ animation-direction
 
+* `animation-fill-mode : none | forwards | backwards | both;`动画完成后的状态;
+    * none: 不改变默认行为;
+    * forwards: 动画完成后, 保持最后一个状态;
+    * backwards: 动画完成后, 保持开始的属性值;
+
 
 ### 隐藏滚动条并可以滑动内容
 ```
