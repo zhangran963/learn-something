@@ -54,3 +54,8 @@
     ]
 }
 ```
+
+
+
+### 优秀插件
+* `Prettier-Code formatter`: 格式化 JSX 语法;

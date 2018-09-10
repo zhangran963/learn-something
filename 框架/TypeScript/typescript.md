@@ -53,3 +53,8 @@ interface SearchFunc {
 | 本身类   |     能   |   能     |     能     |
 | 派生类   |     能   |   不能     |     能     |
 | 本身   |     能   |   不能(实际能读取) | 不能(实际能读取) |
+
+
+### 关闭 String 与 string 的区别
+* String 是 JavaScript 中合法的类型; string 是 TypeScript 中才合法类型;
+* new String("xxx")写成 String 类型; "我是字符串"写成 string 类型;
