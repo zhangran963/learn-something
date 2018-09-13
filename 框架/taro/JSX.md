@@ -26,9 +26,26 @@
 /* 属性, 好像不能用, 暂时放到数据中 */
 ```
 
-* 
+* 列表
+* 最好添加`key={index}`
+* 得写到 render 里面;
+* return 里的js逻辑不能复杂(React 支持复杂, Taro不支持);
 ```
+render(){
+    const content = this.state.items.map((item,i) => {
+        return (
+            <View className={i%2===0?'even':'odd'} key={i}>{item}</View>
+        )
+    });
 
+    return (
+        <View onClick={this.testFunc.bind(this)}>
+            <View>
+                {content}
+            </View>
+        </View>
+    )
+}
 ```
 
 * 
