@@ -1,6 +1,6 @@
 flex多行布局
 * 重点是`flex-flow: row wrap;`和`width: 50%;`;
-```
+```html
 <ul class="flexcontainer">
     <li>Something</li>
     <li>Fox Example</li>
@@ -11,7 +11,8 @@ flex多行布局
     <li>Something</li>
     <li>Fox Example</li>
 </ul>
-
+```
+```css
 .flexcontainer {
     width: 300px;
     display: flex;
@@ -38,7 +39,7 @@ flex多行布局
 
 
 ### 两端对齐(多行)
-```
+```css
 p{
     text-align:justify;
     text-align-last:justify;
@@ -46,7 +47,7 @@ p{
 ```
 
 ### 两端对齐(单行)
-```
+```css
 p{
     text-align:justify;
     text-align-last:justify;
