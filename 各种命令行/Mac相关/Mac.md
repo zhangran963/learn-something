@@ -42,3 +42,8 @@ export PATH=${PATH}:/Users/apple/Library/Android/sdk/tools
 ### 修改保存截图的默认路径
 * `defaults write com.apple.screencapture location 自定义路径`: 修改;
 * `killall SystemUIServer`: 使生效;
+
+
+### 启用 任何来源
+* 新版系统默认不显示任何来源
+* 命令`sudo spctl --master-disable`可以显示出**任何来源**选项;
