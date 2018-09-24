@@ -1,10 +1,12 @@
 urlopen()
 * request.urlopen( url, data?)
+
 * 返回 http.client.HTTPResponse 对象;
     * 通过 .read( size? ) 读取值;
         * .read().decode("utf8") 把 读取完的数据 解码;
     * .readline() 读取1行;
     * .readlines() 读取多行;
+    * .info() 读取头部信息;
     * .getcode() 获取状态码;
 
 
@@ -59,3 +61,4 @@ Request 类
 req = request.Request(url, headers=header, data=data, method="POST")
 ```
 
+ProxyHandler 处理器(代理)
