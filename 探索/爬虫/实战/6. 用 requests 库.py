@@ -12,16 +12,19 @@ headers = {
 # # GET
 # response = requests.get("http://www.baidu.com/s",params=params,headers=headers)
 
-# POST
-data = {
-    "first": "true",
-    "pn": "1",
-    "kd": "python"
-}
-response = requests.post("https://www.lagou.com/jobs/positionAjax.json?city=%E5%8C%97%E4%BA%AC&needAddtionalResult=false", data=data, headers=headers)
+# # POST
+# data = {
+#     "first": "true",
+#     "pn": "1",
+#     "kd": "python"
+# }
+# response = requests.post("http://httpbin.org/ip")
 
-# 打印 json 数据
-print(response.json())
-# 保存 json 数据
-with open("拉勾.html", "w", encoding="utf-8") as fp:
-    fp.write(response.content.decode("utf-8"))
+# print(response.text)
+
+# 使用代理
+response = requests.get("http://httpbin.org/ip", proxies={
+    "https": "123.207.30.131:80"
+})
+
+print(response.content.decode("utf-8"))
