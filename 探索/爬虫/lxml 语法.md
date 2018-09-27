@@ -1,4 +1,4 @@
-### 读取网络文件
+### 解析字符串
 引入lxml并使用
 ```py
 from lxml import etree
@@ -10,7 +10,6 @@ text = """
 """
 
 htmlElement = etree.HTML(text)
-
 
 htmlElement.xpath("//input[@class])
 # 或
@@ -24,11 +23,11 @@ etree.tostring(htmlElement)
 
 
 ### 读取本地文件
-使用 etree.parse()
+使用 etree.parse(源, parser=解析器) 解析, 默认解析器是 XML 解析器;
 ```py
 from lxml import etree
 
-html = etree.parse("./baidu.html")
-result
-
+# 指定 html 解析器, 并使用
+parser = etree.HTMLParser(encoding='utf-8')
+htmlElement = etree.parse("./baidu.html", parser=parser)
 ```

@@ -22,3 +22,20 @@
     * `<`: `price<9.8`, 另有`<=` `>` `>=`等
     * `or`: `price>9.8 or price=9`
 
+
+属性值
+```py
+src = htmlElement.xpath("//div[2]//img/@src")[0]
+# src是属性值的字符串
+```
+
+
+元素值
+```py
+name = htmlElement.xpath("//div[2]//span/text()")[0]
+# name是包裹的字符串
+```
+
+
+当前元素的子元素
+`tr.xpath(".//a/@href")`
