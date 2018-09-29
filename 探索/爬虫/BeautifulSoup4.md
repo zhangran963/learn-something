@@ -68,6 +68,10 @@ for aElement in aElements:
 ```
 
 ### 获取内容文本
+* `.string`: 获取元素文本内容, 仅对没有子元素的元素有效;
+* `.strings`: 获取元素的子孙标签的文本内容;
+* `.striped_strings`: 获取元素的子孙标签的文本内容, 并去掉空白字符;
+* `.get_text`: 获取某标签的
 ```py
 # 获取最后一个a元素, 读取文本
 aElement = soup.find_all("a")[-1:][0]

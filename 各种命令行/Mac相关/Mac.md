@@ -47,3 +47,9 @@ export PATH=${PATH}:/Users/apple/Library/Android/sdk/tools
 ### 启用 任何来源
 * 新版系统默认不显示任何来源
 * 命令`sudo spctl --master-disable`可以显示出**任何来源**选项;
+
+### 核心显卡/独立显卡/自动切换显卡
+* `sudo pmset -a GPUSwitch {x}`: 用命令设置用哪个显卡;
+    * 0: 核心显卡;(这个模式在15-inch的 MacBookPro 中不能用拓展)
+    * 1: 独立显卡;
+    * 2: 自动切换;
