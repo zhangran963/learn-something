@@ -69,11 +69,41 @@ for aElement in aElements:
 
 ### 获取内容文本
 * `.string`: 获取元素文本内容, 仅对没有子元素的元素有效;
-* `.strings`: 获取元素的子孙标签的文本内容;
+* `.strings`: 获取元素的子孙标签的文本内容, 但是一个生成器列表, 需要遍历才能读出结果;
 * `.striped_strings`: 获取元素的子孙标签的文本内容, 并去掉空白字符;
 * `.get_text`: 获取某标签的
+
 ```py
-# 获取最后一个a元素, 读取文本
-aElement = soup.find_all("a")[-1:][0]
-print(aElement.string.strip())
+# <li id="lastLi" class="sbtn">
+#     黑
+#     <a id="lastA" class="ticket-btn" href="https://movie.douban.com/ticket/redirect/?url=https%3A%2F%2Fm.maoyan.com%2Fcinema%2Fmovie%2F1229912%3F_v_%3Dyes%26merCode%3D1000011" target="_blank">
+#         选座购票
+#     </a>
+# </li>
+
+# 对上面这种形式的结构求值
+movieLi = soup.find_all("li", attrs={
+    "id": "lastLi"
+})
+
+movieLi[0].string  # None, 只能对子元素是文本的形式生效;
+movieLi[0].find_all("a", id="lastA")[0].string  # "选座购票", 这种形式, 已经读取到最小的元素, 可以直接获得文本值;
+
+# 此时的 movieLi[0].strings 是生成器列表;
+for i,str in enumerate(movieLi[0].strings):
+    print(str.strip())
+    print(i)
+
+# 最好的选字符串方式, 直接去掉了空格和换行
+movieLi[0].stripped_strings  # <generator object stripped_strings at 0x102e0ddb0>
+list(movieLi[0].stripped_strings)  # ['黑', '选座购票']
+
+# get_text() 获取此元素的所有子字符串, 包含空格等;
+liElement[0].get_text()
 ```
+
+### find & find_all 的区别
+* find: 获取第一个符合条件的标签;
+    * 获取的直接是标签;
+* find_all: 获取所有的符合条件的标签;
+    * 获取的是标签内容组成的列表;
