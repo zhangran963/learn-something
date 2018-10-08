@@ -5,7 +5,7 @@
 4. 设置.zshrc 文件`export PATH=/usr/local/mongodb-server/bin:$PATH`;
 5. 在某地址建立`data`, `logs`,等文件夹,在 logs 文件夹下建立`mongo.log`文件 , 建立`mongo.conf`配置文件;
 6. 设置配置文件内容
-```
+```py
 #数据库路径
 dbpath=/Users/ran/Public/mongoFile/data/
 

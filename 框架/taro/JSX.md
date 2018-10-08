@@ -1,16 +1,16 @@
 * 给结构赋值
-```html
+```jsx
 <View data-i={1 + this.calc1()}></View>
 ```
 
 * 不能使用解构模式`...`(react 中可以);
-```html
+```jsx
 /* 小程序中不能这样用 */
 <Greeting {...props} />  
 ```
 
 * 没有给属性传值, 默认为 true;
-```html
+```jsx
 <MyTextBox autocomplete />
 <MyTextBox autocomplete={true} />
 ```
@@ -34,6 +34,11 @@
     paddingTop: this.state.statusBarHeight+'px',
     backgroundColor: this.props.isColor?'red':'green'
 }}></View>
+```
+
+### 动态 className 
+```jsx
+<p className={["default-class", true==1?"yes":"no"]}></p>
 ```
 
 

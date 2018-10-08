@@ -56,8 +56,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 `db.collectionname.insert({xxxxx:xxxxx})`;
 > 插入数据
 
-`db.collection.find()`
-> 列出数据
+### 列出数据
+* `db.集合名.find()`
+
 
 `db.mycol.find({},{"title":0,_id:0})`
 > 按条目查找显示,0代指"不显示",1代指"显示";
