@@ -1,5 +1,6 @@
-### 查找
+### 查找 文件&文件夹
 * `find / -name "nginx.conf"`: 搜索nginx.conf
+* `find / -name "tomcat7" -type d`: 查找 tomcat7 文件夹;
 
 
 ### 新建删除等
