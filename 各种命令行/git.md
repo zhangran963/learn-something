@@ -139,6 +139,9 @@
 1. `git remote add origin 你的远程库地址`关联到远程库
 2. `git remote -v`: 查看关联的远程仓库地址
 
+### 移除远程仓库
+* `git remote rm origin`: 移除远程仓库地址
+
 ### 上传
 1. `git add xxx` 先保存(缓存);
 2. `git commit -m "说明文字"`给本次上传添加说明;
