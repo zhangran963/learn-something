@@ -8,7 +8,7 @@ element.lastChild;
 > if(! xxxx) return false;
 
 onload绑定多个函数的方法：创建一个新函数，此函数功能是1.没有onload时，加上传入的onload，有onload事件后，在onload事件后再加入新的事件；
-```
+```js
 function addLoadEvent(func){
     var oldonload = window.onload;
     if(typeof window.onload != "function"){
@@ -40,7 +40,7 @@ element.nodeName 指TagName，如 IMG 、 UL ；
 
 
 创建节点、文本、属性 等；插入节点；
-```
+```js
 document.createElement();
 document.createTextNode();
 element.setAttribute(" "," ");
@@ -52,7 +52,7 @@ parent.appendChild(child);
 > parent.insertBefore(newElement,targetElement);
 
 没有 insertAfter() 方法, 需要自定义；
-```
+```js
 function insertAfter(newElement,targetElement){
     var parent = targetElement.parentNode;
     if(parent.lastChild == targetElement){
@@ -66,7 +66,7 @@ function insertAfter(newElement,targetElement){
 
 
 画圆角矩形的函数
-```
+```js
 function creatRoundRect(ctx, x1, y1, width, height, radius){
        // 移动到左上角的开始点
        ctx.moveTo(x1 + radius, y1);
@@ -102,7 +102,7 @@ function 后，有没有括号的区别
 abrr 缩略语
 
 for 循环方式
-```
+```js
 for(x in arr){
     全部循环，x指下标；arr指数组；
     例如：
@@ -117,16 +117,15 @@ setTimeout(func,interval)   设置固定时间后执行；
 elem.style.xxxxxx   得到的是字符串，需要 parseInt() 处理;
 
 显示缩略图
-```
-parent{
+```js
+parent: {
     position:relative; 为了使img的内容嫩定位；
-
 }
 ```
 
 
 canvas 知识点
-```
+```js
 var ctx = canvas.getContext("2d");
 ctx.drawImage(img,x,y,width,height);
 ```
