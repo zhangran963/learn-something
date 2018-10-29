@@ -41,7 +41,7 @@
 
 
 
-```
+```js
 console.log('1');
 
 setTimeout(function() {

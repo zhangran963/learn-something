@@ -5,12 +5,12 @@
 
 
 ### 创建项目
-1. 命令创建项目: `scrapy startproject 名称`
+1. 创建项目: `scrapy startproject 名称`
 2. 进入项目名称文件夹下, 如`项目根目录/项目名称/`;
-3. 运行`scrapy genspider 爬虫名称(不能和项目重名) "爬去网站的域名"`;
+3. 创建新的 spider: `scrapy genspider 爬虫名称(不能和项目重名) "爬去网站的域名"`;
 4. 设置文件:
     * `ROBOTSTXT_OBEY`值改为 `False`(是否按 robots.txt 规则爬取);
     * `headers`
 
-
-#
+### 运行项目
+* `scrapy crawl 名称`

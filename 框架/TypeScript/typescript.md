@@ -12,7 +12,7 @@
 
 ### enum 类型
 * 生成键值对称的对象
-```
+```ts
 color[color["name"] = 1] = "name";
 // { '1': 'name', name: 1 }
 ```
@@ -24,7 +24,7 @@ color[color["name"] = 1] = "name";
 
 ### 接口
 * 多个类型`string|number`;
-```
+```ts
 interface Person{
     name: string,
     age: number,  // 必选属性
@@ -38,7 +38,7 @@ interface Person{
 
 ### 函数类型的 interface
 * 函数类型的类型检查来说，函数的参数名不需要与接口里定义的名字相匹配;
-```
+```ts
 interface SearchFunc {
   (source: string, subString: string): boolean;
   // 参数1: source;  参数2: subString;
@@ -56,5 +56,5 @@ interface SearchFunc {
 
 
 ### 关闭 String 与 string 的区别
-* String 是 JavaScript 中合法的类型; string 是 TypeScript 中才合法类型;
-* new String("xxx")写成 String 类型; "我是字符串"写成 string 类型;
+* `String` 是 JavaScript 中合法的类型; `string` 是 TypeScript 中才合法类型;
+* `new String("xxx")`写成 `String` 类型; `"我是字符串"`写成 `string` 类型;

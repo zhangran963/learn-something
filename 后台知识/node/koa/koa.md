@@ -3,7 +3,7 @@
 
 ### 引入
 * 引入 koa, 开启简单服务;
-```
+```js
 const Koa = require('koa');
 const app = new Koa();
 
@@ -30,8 +30,9 @@ app.listen(3000);
 ### 路径内参数
 1. 路由设置为`/read/:idn`;
 2. 请求路径`http://localhost:7777/read/110103030170?name=siyeccao`;
-* 读取到的结果: `ctx.params`:
-```
+* 读取到的结果:
+```js
+// ctx.params的值
 {
     idn: '110103030170'
 }

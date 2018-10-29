@@ -9,7 +9,7 @@
 5. `cd logs && touch mongodb.log`: 创建 log文件 用于存日志;
 6. `./bin/mongod --dbpath /root/my/mongodb/db`: 通过这种方式启动一下, 测试是否能启动;
 7. 创建配置文件`mongodb.conf`:
-```
+```py
 dbpath=/root/my/db
 logpath=/root/my/logs/mongodb.log
 port=27017

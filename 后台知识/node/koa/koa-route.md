@@ -2,7 +2,7 @@
 * `npm install --save koa-route`
 
 ### 简单示例
-```
+```js
 const Koa = require("koa");
 const route = require("koa-route");
 
@@ -13,7 +13,7 @@ let main = (ctx) => {
 };
 let first = (ctx) => {
     ctx.response.body = "first page";
-}
+};
 
 app.use( route("/", main) );
 app.use( route("/first", first) )
@@ -23,7 +23,7 @@ app.use( route("/first", first) )
 
 ### 子路由
 * 有总路由 router , 对应 `/ => mainRouter; /page => pageRouter`;
-```
+```js
 let router = new Router(), main = new Router(), page = new Router();
 
 /* 定义子路由 */
@@ -53,11 +53,12 @@ app.use(router.routes()).use(router.allowedMethods())
     * `ctx.request.query`: 数据组成的对象;
     * `ctx.request.querystring`: 数据字符串;
 
+
 ### 获取数据 post
 * koa并没有提供直接解析 post数据的方法; 可用`npm install --save koa-bodyparser`处理;
 * 解析出来的数据对象在 `ctx.request.body` 中;
 > 注意：ctx.request是context经过封装的请求对象，ctx.req是context提供的node.js原生HTTP请求对象，同理ctx.response是context经过封装的响应对象，ctx.res是context提供的node.js原生HTTP请求对象
-```
+```js
 router.post("/data", (ctx, next) => {
     let data = ctx.request.body;  /* 数据 */
     /* 数据处理中... */

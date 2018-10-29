@@ -18,16 +18,16 @@ show collections  //显示当前数据库的集合
 载入数据文件
 > `mongoimport --db test --collection restaurants --drop --file primer-dataset.json`
 
-配合使用1 路由
-```
+### 配合使用1 路由
+```js
 var router = express.Router();
 router.get("/",function(req,res){
    res.render("index",{title:"主页index",title2:"我是title2"});
 });1
 ```
 
-数据库读取
-```
+### 数据库读取
+```js
 var mongodb = require("mongodb").MongoClient;
 mongodb.connect("mongodb://localhost:27017/ran",function(err,db){
    app.get()
@@ -37,8 +37,8 @@ mongodb.connect("mongodb://localhost:27017/ran",function(err,db){
 });
 ```
 
-bodyParser
-```
+### bodyParser
+```js
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -77,18 +77,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 2. `var cursor =db.collection('restaurants').find( { "address.zipcode": "10075" } );` 属性或嵌套的属性
 3. `var cursor =db.collection('restaurants').find( { "grades.score": { $gt: 30 } } );`指定运算符，大于小于
 4. and关系
-```
+```js
 var cursor =db.collection('restaurants').find(
   { "cuisine": "Italian", "address.zipcode": "10075" }
 );
 ```
 5. or关系
-```
+```js
 var cursor =db.collection('restaurants').find(
   { $or: [ { "cuisine": "Italian" }, { "address.zipcode": "10075" } ] }
 );
 ```
 6. 排序,1代表升序,-1代表降序
-```
+```js
 var cursor =db.collection('restaurants').find().sort( { "borough": 1, "address.zipcode": 1 } );
 ```

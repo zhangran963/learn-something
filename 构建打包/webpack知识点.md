@@ -29,7 +29,7 @@ plugin相关
 `npm install css-loader --registry=https://registry.npm.taobao.org/` 使用淘宝的代理
 
 代码片段
-```
+```js
 context: path.resolve(__dirname,'src'),
 entry: './index.js',
 ```
@@ -37,7 +37,7 @@ entry: './index.js',
 
 
 js文件=>页面
-```
+```js
 new CommonsChunkPlugin({
 			name: "commons",
 			chunks: ["pageA", "pageB", "admin-commons"],

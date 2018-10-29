@@ -13,7 +13,8 @@
 
 1. `plugins: [new HtmlWebpackPlugin()]`
 自动生成 index.html 文件;
-2. ```
+2. 
+```js
 plugins: [
     new HtmlWebpackPlugin({
         title: 'My App',
@@ -50,7 +51,7 @@ plugins: [
 
 ## 加载资源文件
 1. 加载css文件
-```
+```js
 module: {
     rules: [
         {test: /\.css$/,use:["style-loader","css-loader"]},
@@ -59,7 +60,7 @@ module: {
 ```
 2. 加载图片
 页面中写法`var myImage = require("../选择器.jpg");`,变量代表<img>的src属性;  
-```
+```js
 rules:[
     {test: /\.(png|svg|jpg|gif)$/, use: ['file-loader']}
 ]
@@ -72,7 +73,7 @@ rules:[
 ### 三种监控模式
 1. `webpack --watch`自动编译,但不会自动刷新;
 2. `webpack-dev-server`自动编译+自动刷新;还需要在webpack.config.js中配置:
-```
+```js
 devServer: {
     contentBase: './dist/ht'  /*文件路径*/
 },
