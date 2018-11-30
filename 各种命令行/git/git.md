@@ -23,10 +23,7 @@
 * `git log --pretty=oneline` 单行打印历史纪录;
 * `git reflog` 查看所有历史纪录(包含被删除的 commit);
 
-### 版本回退
-* `git reset --hard HEAD^` 回退上一版本;
-    * `git reset --hard HEAD^^` 回退上两个版本;
-    * `git reset --hard HEAD~100` 回退上100个版本;
+
 
 ### 再返回回退前
 * `git reset --hard [回退前版本的前几个字母]`, 返回回退前状态,需要知道回退前的 id;
@@ -72,8 +69,6 @@
 ### 删除旧分支
 * `git branch -d xxx`把没用的分支删除掉;
 
-### 有冲突时:
-* 文件中会标识出冲突内容, 手动解决后, 再次提交;
 
 ### 查看合并信息
 * `git log --graph --pretty=oneline --abbrev-commit`;
@@ -84,9 +79,6 @@
 
 * 默认采用 fast forward 模式, 直接指针移动到合并完成处;
 * 禁用 fast forward 模式, 合并时生成一个新的 commit, `git merge --no-ff -m "禁用 fast forward 模式" dev`;
-
-### 查看远程库的信息
-* `git remote -v`
 
 
 ### 多人合作开发
@@ -132,15 +124,7 @@
 
 
 
-### 远程克隆到本地
-1. `git clone "https://github.com/Clayder-ran/test.git"`
 
-### 关联远程仓库
-1. `git remote add origin 你的远程库地址`关联到远程库
-2. `git remote -v`: 查看关联的远程仓库地址
-
-### 移除远程仓库
-* `git remote rm origin`: 移除远程仓库地址
 
 ### 上传
 1. `git add xxx` 先保存(缓存);
@@ -152,9 +136,3 @@
 1. `git pull --rebase origin master`获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）
 
 
-### 查找历史纪录信息
-`git log -S 搜索内容`: 搜索git仓库中更改的内容;
-
-### 强制覆盖远程
-`git push --force`: 强制用本地分支覆盖远程的分支;
-    * eg: 在 master上有人更改后, 自己开发分支rebase后, 自己的远程分支和本地分支互相产生冲突, 知道应该以本地分支为准, 所以可以强制覆盖远程分支;
