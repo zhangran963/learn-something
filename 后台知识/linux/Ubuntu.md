@@ -8,6 +8,12 @@
 7. `ssh-copy-id -i ~/.ssh/id_rsa.pub root@162.219.125.154 -p 29707`: 免密码登录, 把登录机的 id_rsa.pub 文件上传到 远程机;
 
 
+### 清除服务器后, 再次连接服务器
+* 用 ssh 连接过服务器, 客户端会生成一个认证, 如果直接连接 同IP的新服务器, 会报错"WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!";
+* 清除旧认证`ssh-keygen -R [服务器IP]`;
+* 再次连接即可;
+
+
 ### 查看*登录用户*进程
 * 登录的用户, 某些 ssh 登录超时, 窗口不能操作了, 在这还显示登录中;
 1. `ps aux|grep sshd`: 列出登录用户列表;
