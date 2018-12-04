@@ -1,4 +1,4 @@
-### 安装
+### 安装1
 1. `wget https://nginx.org/download/nginx-1.14.0.tar.gz`: 下载安装包
 2. `tar -zxvf nginx-1.14.0.tar.gz`: 解压下载的安装包
 3. (非必须, 为了方便)重命名等操作
@@ -12,6 +12,11 @@
     * 配置文件为conf目录下的nginx.conf;
     * 启动文件在sbin目录下的nginx文件;
 11. 此时本机访问 162.219.125.154:80 应该会有 nginx 的内容;
+
+### 安装2
+* `apt install nginx`;
+    * `ps -ef|grep nginx`: 查看 nginx 的运行路径;
+    * `nginx -t`: 查看 nginx 的配置文件路径;
 
 
 
