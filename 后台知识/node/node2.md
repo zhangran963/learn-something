@@ -5,7 +5,7 @@
 
 **引入xxxxx模块**  
 `var namexxx = require("xxxxx");`
-```
+```js
 // 引入 events 模块
 var events = require('events');
 // 创建 eventEmitter 对象
@@ -41,7 +41,7 @@ eventName可以是connection/data_received等；
 
 **Stream(流)**
 > 从流中读取数据
-```
+```js
 var fs = require("fs");
 var data = '';
 
@@ -59,7 +59,7 @@ readerStream.on('end',function(){
 ```
 
 > 写入流(1.创建文件的流；2.写入)
-```
+```js
 var fs = require("fs");
 var data = '菜鸟教程官网地址：www.runoob.com';
 
@@ -69,7 +69,7 @@ writerStream.end();
 ```
 
 > 管道(复制用)
-```
+```js
 var fs = require("fs")
 
 var readerStream = fs.createReadStream("xxx.txt")
@@ -79,7 +79,7 @@ readerStream.pipe(writerStream)
 ```
 
 > 链式流
-```
+```js
 var fs = require("fs");
 var zlib = require('zlib');
 

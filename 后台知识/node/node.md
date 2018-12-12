@@ -11,7 +11,7 @@
 ### 三种文件路径  
 1. `__filename` 输出文件的绝对路径(带有文件名)`E:\nodejs\node包教不包会\node地址外.js`
 2. `__dirname` 输出文件的绝对路径(不带有文件名)`E:\nodejs\node包教不包会\lession3`
-3. `process.cwd()` 输出执行的文件的 *根文件* 绝对路径(不带有文件名)`E:\nodejs\node包教不包会\lession3`
+3. `process.cwd()` 输出执行的文件的 *根文件* 的绝对路径(不带有文件名)`E:\nodejs\node包教不包会`
 
 
 ### RESTful的理解
