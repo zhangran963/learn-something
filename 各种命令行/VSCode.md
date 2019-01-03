@@ -59,3 +59,8 @@
 
 ### 优秀插件
 * `Prettier-Code formatter`: 格式化 JSX 语法;
+
+
+
+### 格式化
+* `shift + option + F`: 格式化文件
