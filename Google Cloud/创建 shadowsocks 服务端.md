@@ -28,4 +28,4 @@
 11. 打印出ip/密码等结果, 服务自动启动, 可在本地电脑做链接测试;
 
 
-![图片]("Google Cloud.png")
+![图片]("https://raw.githubusercontent.com/Clayder-ran/learn-something/master/Google%20Cloud/Google%20Cloud.png")
