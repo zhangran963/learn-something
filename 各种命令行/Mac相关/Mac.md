@@ -53,3 +53,8 @@ export PATH=${PATH}:/Users/apple/Library/Android/sdk/tools
     * 0: 核心显卡;(这个模式在15-inch的 MacBookPro 中不能用拓展)
     * 1: 独立显卡;
     * 2: 自动切换;
+
+
+### 进程
+1. `ps a|grep [名称]` 或 `ps -a|grep [名称]`: 查询某项目的进程;
+2. `kill [PID]`: 杀掉某进程的PID;
