@@ -2,7 +2,11 @@
 * `npm install -g gulp`;
 * `npm install --save-dev gulp`项目本地安装;
 
-
+### 卸载
+* gulp-cli 1.2.2版本能和 gulp4.0.0版本配合;
+* `npm install gulp-cli@1.2.2 -g`: 安装gulp-cli;
+* `npm install gulp@4.0.0`: 安装gulp;
+* gulp-cli不容易清除, 确认 node_modules 中已经删除了 gulp 后, 可以直接清除`/usr/local/bin`中的命令软链接;
 
 
 ### 使用
@@ -50,3 +54,7 @@ gulp.task("default", function(){
     });
 });
 ```
+
+
+### 执行
+* `gulp --tasks`: 命令执行gulp任务;
