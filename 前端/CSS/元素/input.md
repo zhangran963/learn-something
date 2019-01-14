@@ -1,0 +1,1 @@
+`caret-color: red`: 输入时的光标颜色
