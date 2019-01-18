@@ -57,4 +57,5 @@ gulp.task("default", function(){
 
 
 ### 执行
-* `gulp --tasks`: 命令执行gulp任务;
+方式1: `gulp --tasks`: 命令执行gulp任务;
+方式2: `gulp --gulpfile ./xxx.s`: 用配置文件执行
