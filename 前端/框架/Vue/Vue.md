@@ -20,3 +20,25 @@
 `router index.js`是路由;
 `App.vue`是首页;
 `components/xxx.vue`是组件,填充页面用的;
+
+
+### Vue 项目的跨域设置
+在`/config/index.js`中, 
+```js
+module.exports = {
+    dev: {
+        ...
+        proxyTable: {
+            // 监听带有'/kuayu'的字符串
+            '/kuayu': {
+                target: 'http://localhost:7001', // 设置你调用的接口域名和端口号
+                changeOrigin: true, // 跨域
+                pathRewrite: {
+                    '^/kuayu': '/'    // 把'/kuayu'替换成'/'
+                }
+            }
+        }
+        ...
+    }
+}
+```
