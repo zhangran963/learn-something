@@ -8,12 +8,15 @@ const Koa = require('koa');
 const app = new Koa();
 
 app.use(async (ctx, next) => {
+    // ctx.request.socket.remoteAddress 客户端ip地址
+    // ctx.request.socket.remotePort  端口号
+    // ctx.request.socket.remoteFamily  例'IPv6'
     ctx.response.body = "没有你以后, 一个人四处旅游, 以后的以后, 我钱着别人衣袖, 若是有缘再见, 也会笑着问候";
 });
 
 app.listen(3000);
 ```
-
+* ``
 * `ctx.request.url`: 域名后面的路径, 同`ctx.request.originalUrl`;
 * `decodeURIComponent(ctx.request.url)`: 解析转码的url内容(只是解析一下，还是/xx/xx?xx=xx 的形式);
 * `ctx.request.accepts('mp5')`: 判断 req 是否支持 'mp5';
