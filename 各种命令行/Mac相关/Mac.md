@@ -58,3 +58,8 @@ export PATH=${PATH}:/Users/apple/Library/Android/sdk/tools
 ### 进程
 1. `ps a|grep [名称]` 或 `ps -a|grep [名称]`: 查询某项目的进程;
 2. `kill [PID]`: 杀掉某进程的PID;
+
+
+
+### host 文件地址
+`/etc/hosts`
