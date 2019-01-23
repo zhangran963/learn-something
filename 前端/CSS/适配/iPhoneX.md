@@ -1,3 +1,4 @@
+类 iphoneX 屏幕
 ### 底部横杠
 ```html
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no, viewport-fit=cover" />
