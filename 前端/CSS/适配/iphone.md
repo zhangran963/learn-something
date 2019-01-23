@@ -1,5 +1,9 @@
-类 iphoneX 屏幕
+### 滚动流畅
+* iphone 浏览器中添加`-webkit-overflow-scrolling: touch;`
+
+
 ### 底部横杠
+* 类 iphoneX 屏幕
 ```html
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no, viewport-fit=cover" />
 ```
