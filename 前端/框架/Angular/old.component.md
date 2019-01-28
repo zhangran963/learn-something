@@ -4,7 +4,7 @@
 
 * `*ngFor="let item of items; let index=index"` 写在item元素上, 会重复item元素(声明index后,可以使用index,从0开始);
 * `*ngFor`指令加上`trackBy`提升性能,如下:
-```
+```html
 <li *ngFor="let item of collection;trackBy: trackByFn">{{item.id}}</li>
 
 trackByFn(index, item) {
@@ -30,7 +30,7 @@ setCurrentClass(){
 
 * `[style.color]="isSpecial?'red':'green'"` `[style.font-size]="xxx"` `[style.font-size.em]="isSpecial ? 3 : 1"`更改样式;
 * `[ngStyle]="currentStyle"`
-```
+```js
 currentStyles: {};
 setCurrentStyles() {
   this.currentStyles = {
@@ -85,7 +85,7 @@ export class pagepage{
 读取元素的值(不用函数传值)  
 1. 在export中添加 `@ViewChild("greet") greetDiv: ElementRef;`
 2. 可以用变量`greetDiv`了 `console.log(this.greetDiv.nativeElement.innerHTML)`;
-```
+```js
 以上的代码直接通过 querySelector() 获取页面中的元素，通常不推荐使用这种方式。更好的方案是使用 @ViewChild 和模板变量，具体示例如下：
 
 @Component({
@@ -116,7 +116,7 @@ export class MyComp implements AfterViewInit {
 
 
 获取DOM元素
-```
+```js
 import { ElementRef } from '@angular/core';  //引入ElementRef
 private el: ElementRef,  //实例化
 this.el.nativeElement.querySelectorAll(".conText");  //获取到DOM元素;
