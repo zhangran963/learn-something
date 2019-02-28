@@ -8,7 +8,7 @@
 
 
 ### 根据索引获取元素
-* `//body/div[1]`: 获取 body的 第一个div子元素(注: 第一个元素已1开头);
+* `//body/div[1]`: 获取 body的 第一个div子元素(注: 第一个元素以1开头);
 * `//body/div[last()]`: 获取 body的 最后的div子元素;
 * `//body//form/input[position()<3]`: 获取 form 的前两个 input 子元素;
 
