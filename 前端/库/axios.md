@@ -1,3 +1,5 @@
+[官方文档](https://github.com/axios/axios)
+
 ### get请求
 ```js
 axios.get('url地址?name1=value1&name2=value2').then('回调')
@@ -52,5 +54,22 @@ axios.interceptors.response.use(response => {
 	removePending(response.config);  //在一个ajax响应后再执行一下取消操作，把已经完成的请求从pending中移除
 
     return response
-}, Promise.reject)
+}, (error)=>{
+	if (error.response) {
+      // The request was made and the server responded with a status code
+      // that falls out of the range of 2xx
+      console.log(error.response.data);
+      console.log(error.response.status);
+      console.log(error.response.headers);
+    } else if (error.request) {
+      // The request was made but no response was received
+      // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+      // http.ClientRequest in node.js
+      console.log(error.request);
+    } else {
+      // Something happened in setting up the request that triggered an Error
+      console.log('Error', error.message);
+    }
+    console.log(error.config);
+})
 ```

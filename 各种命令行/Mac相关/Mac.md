@@ -1,13 +1,15 @@
 ### 查看命令详细信息
 `man 命令名称`: 查看某条命令的详细解释, 如`man mkdir`;
 
+### 查看命令的路径
+`which webpack-low`: 输出`webpack-low: aliased to /Users/ran/www/base/node_modules/.bin/webpack`
 
 ### 用终端terminal的命令
 * `open ~/.ssh`打开资源管理器；
 * `sudo scutil --set HostName 新的主机名`修改用户名（每一个命令前的）；
 
 ### 查看隐藏的文件
-* `command shift +`图形窗口中切换隐藏文件;
+* `command shift .`图形窗口中 显示/隐藏 隐藏的文件;
 * `ls -a` 查看全部文件和文件夹(包含隐藏的);
 * `ls -l` 查看可见的文件和文件夹的权限等信息;
 * `ls -al` 查看全部文件和文件夹的权限等信息;

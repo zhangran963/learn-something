@@ -35,3 +35,9 @@ port=27017
 ```
 7. `mongod --config /Users/ran/Public/mongoFile/mongo.conf`: 通过配置文件启动;
 8. `lsof -i:27017`: 查看27017端口是否有 mongodb 服务;
+
+
+### 关闭 mongodb
+1. `ps axu|grep mongo`: 查询MongoDB 进程
+2. `kill -2 进程数`: 安全停止, 向mongod进程发送sigint信号;
+2. `kill -4 进程数`: 安全停止, 向mongod进程发送sigterm信号;

@@ -1,0 +1,1 @@
+`window`, `最外层的 this`, `最外层的 self`: 指向 window;
