@@ -1,0 +1,1 @@
+* `git cherry-pick [commitID]`: 合并其他分支的 commit 到当前分支;
