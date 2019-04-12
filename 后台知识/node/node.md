@@ -33,7 +33,7 @@ manifest 文件
 ### 计时开始和结束标志
 * `console.time()`: 开始计时;
 * `console.timeEnd()`: 结束计时;
-```
+```js
 var counter = 10;
 console.log("计数：%d", counter);  //关键点1
 console.time("获取");
