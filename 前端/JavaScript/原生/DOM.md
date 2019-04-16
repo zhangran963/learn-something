@@ -126,37 +126,3 @@ document.getElementByTagName("input")[0].addEventListener("click", func[, 冒泡
 * 添加属性: `ele.setAttribute(属性名, 属性值)`, `ele.setAttribute(单属性名, '')`;
 * 获取属性: `ele.getAttribute( 属性名 )`;
 * 移除属性: `ele.removeAttribute(属性名 )`;
-
-
-### 跨域
-1. jsonp
-```
-// 定义回调函数
-function func1(response){ console.log(response); }
-
-//创建节点
-var script = document.createElement("script");
-// 添加节点 src=[url?] [& 属性=值]* [callback= 回调函数名 ] ;
-script.src = "https://api.douban.com/v2/book/search?q=javascript&count=1"+"&callback=handleResponse";
-src.type="text/javascript";
-// 插入 script, 会立即生效;
-document.body.insertBefore(script, document.body.firstChild);
-```
-
-2. ajax()
-```
-$.ajax({
-    url: 'http://www.domain2.com:8080/login',
-    type: 'get',
-    dataType: 'jsonp',  // 请求方式为jsonp
-    jsonpCallback: "onBack",    // 自定义回调函数名
-    data: {},
-    success: function(result){
-
-    },
-});
-
-```
-
-
-# `http://www.cnblogs.com/lzhlearn/p/5807872.html`;
