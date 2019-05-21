@@ -45,3 +45,21 @@
 ### 远程上传文件夹
 * `scp -P 29707 -r /Users/ran/Desktop/find root@162.219.125.154:/root/`
 * `scp -P 端口号 -r 本地文件夹地址 登录名@域名或IP:远程地址`
+
+
+```sh
+#!/bin/bash
+rootPath=$PWD
+
+# 上传文件并排除某些内容
+rsync -av -e ssh --exclude='node_modules' --exclude='.git' ${rootPath}/../mine-server root@39.106.117.191:/home/ran/www/
+# rsync -av -e ssh --exclude-from='/Users/ran/www/mine-server/exclude-from.txt' ${rootPath}/../mine-server root@39.106.117.191:/home/ran/www/
+
+echo "更新完成"
+
+
+# /* exclude-from.txt 的内容是:start */
+# .git/* 
+# node_modules/*
+# /* exclude-from.txt 的内容是:end */
+```
