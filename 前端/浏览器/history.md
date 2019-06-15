@@ -47,3 +47,11 @@ window.addEventListener("popstate", function(event) {
     // history.state === event.state
 });
 ```
+
+注意: popstate事件触发后, 默认会滚动文档, 另需设置如下
+```js
+// 阻止默认的"popstate"事件后, 的滚动行为;
+if ('scrollRestoration' in history) {
+	history.scrollRestoration = 'manual';
+}
+```
