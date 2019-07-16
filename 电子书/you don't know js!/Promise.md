@@ -105,5 +105,6 @@ p.then((data)=>{
     * await 必须和 async 配合使用;
     * 用于 Promise时, 会同步地返回 Promise.then.then... 之后最终的结果;
     * 用于 非Promsie 时, 直接返回 后面的对象(这样好像没啥用);
+    * await产生的then 比 promise产生的then慢一点;
 
 

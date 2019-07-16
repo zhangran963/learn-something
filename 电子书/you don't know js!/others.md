@@ -1,6 +1,6 @@
 ### 属性描述符
 查看
-```
+```js
 var myObj = { a: 2};
 Object.getOwnPropertyDescriptor( myObj, "a");
 打印出属性值
@@ -10,8 +10,21 @@ Object.getOwnPropertyDescriptor( myObj, "a");
     writable:true
 ```
 修改
-```
-Object.defineProperty(myObj, "a", {value:1111, enumerable: false})
+```js
+/**
+ * 更改对象属性配置
+ * @param {object} object 对象
+ * @param {string} propertyName 属性名 
+ * @param {object} descriptor 配置
+ * @param {boolean} descriptor.configurable 是否可配置, 默认 true, 否则 只读并不能删
+ * @param {boolean} descriptor.enumerable 是否可枚举, 默认 true
+ * @param {boolean} descriptor.value 值
+ * @param {boolean} descriptor.writable 是否可写, 默认 true
+ */
+Object.defineProperty(object, propertyName, descriptor);
+
+对象
+
 ```
 
 ### getter, setter
