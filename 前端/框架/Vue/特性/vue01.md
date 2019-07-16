@@ -1,5 +1,5 @@
 ### created 实例创建后执行钩子
-```
+```js
 created: function(){
 
 }
@@ -11,7 +11,7 @@ created(){
 
 /*不要用箭头函数*/
 created: ()=>{
-    这里的 this, 指代 window
+    // 这里的 this, 指代 window
 }
 ```
 

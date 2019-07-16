@@ -24,9 +24,9 @@ v-on缩写`<a @click="dosomething"></a>`
 watch
 > 只要watch的关键字发生变化，就执行相应的function；
 
-在内联语句处理器中访问原生 DOM 事件。可以用特殊变量 $event 把它传入方法：
+在内联语句处理器中访问原生 DOM 事件。可以用特殊变量 `$event` 把它传入方法：
 >
-```
+```html
 <button v-on:click="warn('Form cannot be submitted yet.', $event)">Submit</button>
 ```
 
@@ -52,16 +52,20 @@ example1.items.splice(indexOfItem, 1, newValue);
 自定义修饰符：`Vue.config.keyCodes.f1 = 112`
 
 创建组件
-```
+```js
 Vue.component('my-component',{
 
 });
 ```
 
-自定义标签：小写+包含一个横杠(建议)
+自定义标签：小写 + 包含一个横杠(建议)
 
 **Vue-router**
 1. `$route.params` 读取路由的自定义值,使用方式`$route.params.id`等
-2. `const app = new Vue({
+2. 
+```js
+// 给页面嵌套加上路由
+const app = new Vue({
   router
-}).$mount('#app')` 给页面嵌套加上路由
+}).$mount('#app')
+```
