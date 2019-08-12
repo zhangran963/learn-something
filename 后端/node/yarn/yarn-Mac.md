@@ -65,3 +65,10 @@
     }
 }
 ```
+
+### `yarn add`后有报错
+* 报错: `error Missing list of packages to add to your project.`
+* `yarn add whatever`: 继续安装
+
+
+![图床图片](http://ww3.sinaimg.cn/large/006tNc79ly1g5gegw3gxsj30ns0mgta7.jpg)
