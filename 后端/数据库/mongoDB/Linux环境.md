@@ -46,6 +46,9 @@ auth=true
 -   `db.auth(用户名, 密码)`: 用某个用户登录;
 
 ### 关闭 mongodb
-
--   `ps -axu|grep mongo`: 查询 mongodb 的进程数;
--   `kill -2 pid数`: 关闭;
+* 方法1: 查询 PID, 关闭;
+  * 查询 mongod 所在的 PID: `ps -axu|grep mongo` 或 `lsof -i:27017`
+  * 关闭 `kill -2 pid数`;
+* 方法2: 在 Mongo 命令行中关闭:
+  * mongo 进入命令行, 在 admin 库中, 身份认证后
+  * 关闭 `db.shutdownServer()`
