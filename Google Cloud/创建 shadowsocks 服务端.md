@@ -59,3 +59,44 @@ IP地址: 35.220.218.17
 
 ### 退出系统
 * `exit` 或 `logout`
+
+
+
+
+查询占用端口: `lsof -i:43352`
+配置文件路径: `/etc/shadowsocks.json`
+启动服务: `ssserver -c /etc/shadowsocks.json -d start`
+停止服务: `ssserver -c /etc/shadowsocks.json -d stop`
+
+
+### 多端口
+* 用配置文件替换服务器中的配置
+* `scp ~/Documents/GitHub/knowledgement/Google\ Cloud/shadowsocks.json root@45.77.12.228:/etc/`
+```json
+{
+    "server":"0.0.0.0",
+    "local_address":"127.0.0.1",
+    "local_port":1080,
+    "port_password":{
+        "43340":"777777",
+        "43341":"777777",
+        "43342":"777777",
+        "43343":"777777",
+        "43344":"777777",
+        "43345":"777777",
+        "43346":"777777",
+        "43347":"777777",
+        "43348":"777777",
+        "43349":"777777",
+        "43350":"777777",
+        "43351":"777777",
+        "43352":"777777",
+        "43353":"777777",
+        "43354":"777777",
+        "43355":"777777"
+   },
+    "timeout":300,
+    "method":"aes-256-gcm",
+    "fast_open":false
+}
+```

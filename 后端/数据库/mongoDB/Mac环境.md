@@ -2,7 +2,7 @@
 1. 下载 mongodb 文件;
 2. 解压缩文件;
 3. 重命名并放到`/usr/local`文件夹下(一般会放到这个地方);
-4. 设置.zshrc 文件`export PATH=/usr/local/mongodb-server/bin:$PATH`;
+4. 设置`.zshrc`文件: `export PATH=/usr/local/mongodb-server/bin:$PATH`;
 5. 在某地址建立`data`, `logs`,等文件夹,在 logs 文件夹下建立`mongo.log`文件 , 建立`mongo.conf`配置文件;
 6. 设置配置文件内容
 ```py
