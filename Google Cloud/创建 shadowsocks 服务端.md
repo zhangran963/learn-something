@@ -66,7 +66,7 @@ IP地址: 35.220.218.17
 查询占用端口: `lsof -i:43352`
 配置文件路径: `/etc/shadowsocks.json`
 启动服务: `ssserver -c /etc/shadowsocks.json -d start`
-停止服务: `ssserver -c /etc/shadowsocks.json -d stop`
+停止服务: `ssserver -d stop`
 
 
 ### 多端口

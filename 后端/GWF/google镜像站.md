@@ -1,3 +1,5 @@
+tip: 镜像 谷歌镜像 Google镜像
+
 * [github教程](https://github.com/cuber/ngx_http_google_filter_module/blob/master/README.zh-CN.md)
 
 * 亲测: 兼容性差
