@@ -52,6 +52,8 @@ IP地址: 35.220.218.17
     * `echo "net.core.default_qdisc=fq" | sudo tee --append /etc/sysctl.conf`
     * `echo "net.ipv4.tcp_congestion_control=bbr" | sudo tee --append /etc/sysctl.conf`  
     * `sysctl -p`: 保存生效
+
+    > 合并后命令: `modprobe tcp_bbr && echo "tcp_bbr" | sudo tee --append /etc/modules-load.d/modules.conf && echo "net.core.default_qdisc=fq" | sudo tee --append /etc/sysctl.conf && echo "net.ipv4.tcp_congestion_control=bbr" | sudo tee --append /etc/sysctl.conf && sysctl -p`
 4. 检测结果:
     * 输入`lsmod | grep bbr`, 有"tcp_bbr"模块, 就是已经开启了 BBR;
 
