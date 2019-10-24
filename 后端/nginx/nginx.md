@@ -35,6 +35,8 @@ Could not symlink share/man/man8/nginx.8
 ### 重启
 * `sudo nginx -s reload`重启 nginx;
 
+### 查找配置文件
+* `nginx -t`: 查找配置文件
 
 
 

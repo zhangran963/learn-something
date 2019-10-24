@@ -1,4 +1,6 @@
 [官方文档](https://github.com/axios/axios)
+CDN: `https://cdn.bootcss.com/axios/0.19.0/axios.min.js`
+
 
 ### get请求
 ```js
