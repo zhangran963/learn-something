@@ -34,7 +34,7 @@ event.preventDefault()
 
 
 给数组的某一项改变新值（会更新）
-```
+```js
 Vue.set(example1.items, indexOfItem, newValue);
 example1.items.splice(indexOfItem, 1, newValue);
 ```
@@ -69,3 +69,8 @@ const app = new Vue({
   router
 }).$mount('#app')
 ```
+
+
+
+<!-- Vue.mixin -->
+![global-mixin.js](https://tva1.sinaimg.cn/large/006y8mN6ly1g8w5ybmnr3j30ns0mgt98.jpg)
