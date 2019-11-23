@@ -47,6 +47,13 @@
 * `scp -P 端口号 -r 本地文件夹地址 登录名@域名或IP:远程地址`
 
 
+
+### 搜索
+grep [搜索内容] [在某某文件中]
+![grep示例](https://tva1.sinaimg.cn/large/006y8mN6ly1g97qr6wc4ij30sg07ojsw.jpg)
+
+
+
 ```sh
 #!/bin/bash
 rootPath=$PWD
