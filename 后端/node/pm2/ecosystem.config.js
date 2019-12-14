@@ -22,7 +22,7 @@ module.exports = {
 	deploy: {
 		production: {
 			user: 'ran',  //'远程主机用户名',
-			host: '39.106.117.191',   //'远程主机的ssh-config中的别名',
+			host: '39.106.53.163',   //'远程主机的ssh-config中的别名',
 			port: '22',   // '远程主机ssh端口',
 			ref: 'origin/master', //远程gitee上的分支
 			repo: 'git@github.com:Clayder-ran/mine-server.git',  // 远程仓库地址

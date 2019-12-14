@@ -59,8 +59,8 @@ grep [搜索内容] [在某某文件中]
 rootPath=$PWD
 
 # 上传文件并排除某些内容
-rsync -av -e ssh --exclude='node_modules' --exclude='.git' ${rootPath}/../mine-server root@39.106.117.191:/home/ran/www/
-# rsync -av -e ssh --exclude-from='/Users/ran/www/mine-server/exclude-from.txt' ${rootPath}/../mine-server root@39.106.117.191:/home/ran/www/
+rsync -av -e ssh --exclude='node_modules' --exclude='.git' ${rootPath}/../mine-server root@39.106.53.163:/home/ran/www/
+# rsync -av -e ssh --exclude-from='/Users/ran/www/mine-server/exclude-from.txt' ${rootPath}/../mine-server root@39.106.53.163:/home/ran/www/
 
 echo "更新完成"
 
