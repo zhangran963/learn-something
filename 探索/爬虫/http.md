@@ -1,12 +1,17 @@
-http 协议
+### http 协议
 * 默认80端口
 
-https 协议
+### https 协议
 * 默认 443 端口
 
 
-url解释
-* URL 统一资源定位符
+### URL解释
+* URI 统一资源标识符: 包含URL, URN, 其他等
+* URL 统一资源定位符, 是URI的一个子集，告诉我们访问网络位置的方式
+  * 示例: http://bitpoetry.io/posts/hello.html
+* URN 是URI的子集，包括文件位置和内容，但是不包括访问方式
+  * 示例: bitpoetry.io/posts/hello.html#intro
+
 * `scheme://host:port/path/?query-string=xxx#anchor`
     * scheme: 协议;
     * host: 主机名;
@@ -17,19 +22,19 @@ url解释
 * 发送 url 前, 需要先对 url进行编码(字母/数字/部分符号不用编码), 采用 `%+16进制码`;
 
 
-发送数据
+### 发送数据
 * 数据在 url中(get 请求);
 * 数据在 body 中(post请求);
 * 数据在 head 中;
 
 
-伪造身份
+### 伪造身份
 * 服务器通过 header 中的 user-agent 判断身份类型;
     * 爬虫程序默认的身份是 python, 需要改成浏览器;
 * Referer: 此请求的上一个 url是什么(从哪里来的);
     * 爬虫程序需要改为上一个url;
 
-状态码
+### 状态码
 * 200: 正常, 可能给爬虫返回假数据;
 * 301: 永久重定向(例 www.jingdong.com => www.jd.com);
 * 302: 临时重定向, (例, 未登录时重定向到登录页);
