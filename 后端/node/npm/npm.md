@@ -1,21 +1,22 @@
-# npm 路径
-* `/usr/local/lib/node_modules`: 全局npm包安装的位置;
-* `npm uninstall 包名称 -g`: 删除全局包(清除此包的文件夹);
+### 查看 Node 路径
 
+- `npm config get prefix`
+  ![](https://databasing.oss-cn-beijing.aliyuncs.com/markdown/20200120175228.png)
 
-* `npm config get prefix` 获取路径(用cnpm时用`cnpm config get prefix`);
+### 查看下载源地址
 
-
-C:\Program Files\nodejs\node_modules
-
+- `npm config get registry`
+  ![](https://databasing.oss-cn-beijing.aliyuncs.com/markdown/20200120175355.png)
+- 更改下载源到淘宝源: `npm config set registry https://registry.npm.taobao.org`
 
 ### 插件版本
-* `npm list koa`: 查看插件版本;
-* `npm list -g koa`: 查看本地插件版本;
-* `npm view koa versions`: 查看某插件的历史版本(在线);
-* `npm info koa`: 包信息;
-* `npm install -g ionic@3.15.0`: 安装指定版本;
 
+- `npm list koa`: 查看插件版本;
+- `npm list -g koa`: 查看本地插件版本;
+- `npm view koa versions`: 查看某插件的历史版本(在线);
+- `npm info koa`: 包信息;
+- `npm install -g ionic@3.15.0`: 安装指定版本;
 
 ### 卸载
+
 `npm uninstall -g ionic`
