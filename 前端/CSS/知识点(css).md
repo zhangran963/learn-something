@@ -43,8 +43,7 @@ ul{
 3. center  垂直居中对齐；
 4. Justify  两段对齐，水平等分父元素高度；
 
-#### defer属性
-> 在script标签中设置 defer='defer' 属性，浏览器会加载完DOM之后才执行js
+
 
 box-shadow: x轴偏移, y轴偏移, 模糊距离, 放大的尺寸, 颜色;   
 
