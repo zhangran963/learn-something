@@ -11,12 +11,6 @@
 * `git commit -m [描述内容]`
 * `git reset --soft HEAD^`撤销 commit, 保留代码;
 
-### 缓存进行中的文件
-* `git stash`缓存;
-* `git stash pop`弹出并删除列表中弹出的项;
-* `git stash apply`弹出不删除列表中的项; `git stash drop`手动删除列表项;
-* `git stash apply stash@{0}`恢复指定的缓存项;
-
 
 ### 查看历史纪录
 * `git log` 查看历史纪录;
