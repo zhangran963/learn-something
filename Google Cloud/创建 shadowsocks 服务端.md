@@ -24,6 +24,7 @@
    - 输入两次相同的密码, 创建成功;
    - `su - root`: 切换当前账号 到 root 账号;
 9. 开始安装 shadowsocks 服务器端;
+  * 1. 手动处理:
    - 下载 shadowsocks 软件: `wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh`;
    - 权限: `chmod +x shadowsocks.sh`;
    - 设置: `sudo ./shadowsocks.sh 2>&1 | tee shadowsocks.log`;
@@ -31,6 +32,24 @@
      2. 端口
      3. 加密方式
      4. 按"任意按键"开始安装;
+
+  * 2. 创建文件, 如`ss.sh`, 内容如下:
+  ```sh
+  wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
+
+  sleep 1
+
+  chmod +x shadowsocks.sh
+
+  sleep 1
+
+  sudo ./shadowsocks.sh 2>&1 | tee shadowsocks.log
+
+  sleep 1
+  
+  modprobe tcp_bbr
+  ```
+  * 执行, `./ss.sh`
 10. 一会儿(最低配机器, 用了 10 分钟)安装完成
 11. 打印出 ip/密码等结果, 服务自动启动, 可在本地电脑做链接测试;
 
