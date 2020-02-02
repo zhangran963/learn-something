@@ -3,11 +3,12 @@
 - `npm config get prefix`
   ![](https://databasing.oss-cn-beijing.aliyuncs.com/markdown/20200120175228.png)
 
-### 查看下载源地址
+### 源地址
 
-- `npm config get registry`
+- `npm config get registry`: 查看源
   ![](https://databasing.oss-cn-beijing.aliyuncs.com/markdown/20200120175355.png)
-- 更改下载源到淘宝源: `npm config set registry https://registry.npm.taobao.org`
+- 更改源到淘宝源: `npm config set registry https://registry.npm.taobao.org`
+- 恢复官方源: `npm config delete registry`
 
 ### 插件版本
 

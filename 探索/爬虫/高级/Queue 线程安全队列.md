@@ -1,1 +1,1 @@
-* Python内置的 queue模块是线程安全的队列
+- Python 内置的 queue 模块是线程安全的队列
