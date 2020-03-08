@@ -5,7 +5,8 @@
 ```js
 window.onerror = function(...arg){
   console.log('>>> window.onerror:', {...arg});
-  // 是否返回 true, 影响错误是否继续传递
+
+  /* 用 return true 阻止错误继续传播; err.preventDefault()不能阻止 */
   return true
 }
 
@@ -22,8 +23,10 @@ window.onerror = function(...arg){
 ## 报错类型
 * 能收集的错误
   * 同步
+  * 异步: setTimeout等
 
 * 不能收集的错误
-  * 异步
+  * Promise
+  * img 图片
   * 网络请求
-  * 网络文件请求
+  * 网络文件请求(script标签)
