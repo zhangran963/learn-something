@@ -1,43 +1,48 @@
-### 单js文件
-* 指定生成文件名+路径`npx webpack src/index.js --output dist/bundle.js`;
+### 单 js 文件
+
+- 指定生成文件名+路径`npx webpack src/index.js --output dist/bundle.js`;
 
 ### lodash
-```
+
+```js
 import _ from 'lodash';
 
-_.join(["Hello", "webpack", "四叶草"] , " * ");
+_.join(['Hello', 'webpack', '四叶草'], ' * ');
 // "Hello * webpack * 四叶草"
 ```
 
 ### 使配置文件
+
 `npx webpack --config webpack.config.js`
-```
-const path = require("path");
+
+```js
+const path = require('path');
 
 module.exports = {
-    entry: "./src/index.js",
-    output: {
-        filename: "bundle.js",
-        path: path.resolve(__dirname, "dist")
-    }
+	entry: './src/index.js',
+	output: {
+		filename: 'bundle.js',
+		path: path.resolve(__dirname, 'dist')
+	}
 };
 ```
 
 ### 路径
-```
-const path = require("path");
 
-path.resolve(__dirname,"dist");
+```js
+const path = require('path');
+
+path.resolve(__dirname, 'dist');
 // /Users/ran/Documents/makepackage/demo1/dist
 ```
 
+### npm 脚本
 
-### npm脚本
 `npm run xxx`: 运行 xxx 代表的内容;
 
-
 ### css
-```
+
+```js
 ** .js **
 import "../css/style.css";  // 路径较自由, 相对于 js 文件;
 
@@ -54,8 +59,10 @@ module: {
 ```
 
 ### 分离的 CSS 文件
-* `extract-text-webpack-plugin`生成单独 CSS 文件的插件;
-```
+
+- `extract-text-webpack-plugin`生成单独 CSS 文件的插件;
+
+```js
 ** config **
 rules: [
     {
@@ -76,7 +83,8 @@ import "./style.css";
 ```
 
 ### 图片
-```
+
+```js
 ** js **
 import Icon from "./icon1.png";  //图片
 
@@ -100,8 +108,7 @@ rules: [
 
 ### 数据
 
-
-```
+```js
 ** config **
 rules: [
     ...
@@ -129,9 +136,9 @@ Data["note"];  // 对象的属性
 
 ```
 
+### 多 js 文件入口
 
-### 多js文件入口
-```
+```js
 *** html **
 // 提前引入文件
 <script src="./print.bundle.js"></script>
@@ -140,7 +147,7 @@ Data["note"];  // 对象的属性
 *** config **
 entry: {
         // 2个文件入口, 属性名 用于输出文件;
-        app: "./src/index.js", 
+        app: "./src/index.js",
         print: "./src/print.js"
     },
     output: {
@@ -152,9 +159,12 @@ entry: {
 ```
 
 ### 修正 html
+
 插件: `html-webpack-plugin`;
-* 自动生成 index.html; 自动添加 "script";
-```
+
+- 自动生成 index.html; 自动添加 "script";
+
+```js
 ** config **
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -165,11 +175,13 @@ plugins: [
     ]
 ```
 
-
 ### 清除旧数据
+
 插件: `clean-webpack-plugin`;
-* 写入之前先把旧数据清除;
-```
+
+- 写入之前先把旧数据清除;
+
+```js
 *** config **
 plugins: [
     new CleanWebpackPlugin(["dist"]),  // 清除 dist 文件夹下的内容;
@@ -177,9 +189,12 @@ plugins: [
 ```
 
 ### 代码精简
+
 插件: `uglifyjs-webpack-plugin`;
-* 可以精简掉没有用到的 function,
-```
+
+- 可以精简掉没有用到的 function,
+
+```js
 ** config **
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
@@ -192,36 +207,40 @@ plugins: [
 ```
 
 ### 显示源文件输出行数(开发中)
-* `devtool: "inline-source-map"`
-```
+
+- `devtool: "inline-source-map"`
+
+```js
 ** config **
 // 启用输出源文件行数功能;仅开发用;
 devtool: "inline-source-map",
 ```
 
+### 文件监听功能 1
 
+- `webpack --watch`; 文件更改后就编译;但需手动刷新;
 
-### 文件监听功能1
-* `webpack --watch`; 文件更改后就编译;但需手动刷新;
+### 文件监听功能 2
 
-### 文件监听功能2
-* `webpack-dev-server --open`, 服务运行在`http://localhost:8080`; 文件更改后就编译; 会自动刷新;
-```
+- `webpack-dev-server --open`, 服务运行在`http://localhost:8080`; 文件更改后就编译; 会自动刷新;
+
+```js
 ** config **
 devServer: {
     contentBase: "./dist"
 }
 ```
 
-### 文件监听功能3
-* 中间件    
+### 文件监听功能 3
 
-
+- 中间件
 
 ### 模块热替换
-* 自动更新部分模块, 不用刷新;
-* 应用效果并不理想;
-```
+
+- 自动更新部分模块, 不用刷新;
+- 应用效果  并不理想;
+
+```js
 ** config **
 const webpack = require("webpack");
 
@@ -244,6 +263,5 @@ if(module.hot){
 }
 
 ```
-
 
 ###

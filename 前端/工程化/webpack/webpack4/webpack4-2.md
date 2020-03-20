@@ -4,7 +4,7 @@
 ### 多个配置文件
 * `webpack-merge`合并多个配置文件用的;
 
-```
+```js
 ** config1: common **
 已经有了一个 webpack.common.js
 
@@ -26,7 +26,7 @@ module.exports = merge(common, {
 
 ### 区分开发和生产环境
 
-```
+```js
 ** config.prob **
 const webpack = require("webpack");
 
@@ -46,7 +46,7 @@ if(process.env.NODE_ENV === "productionnnn"){
 
 
 ### 代码分离: 手动
-```
+```js
 ** config **
 entry: {
     // 写多个名字, 可以分成多个代码块;
@@ -62,7 +62,7 @@ output: {
 
 
 ### 代码分离: 防止重复
-```
+```js
 ** config **
 optimization: {
     splitChunks: {
