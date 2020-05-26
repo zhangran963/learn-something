@@ -11,7 +11,7 @@
 1. `./bin/mongod --dbpath /root/my/mongodb/db`: 通过这种方式启动一下, 测试是否能启动;
 1. 创建配置文件`mongodb.conf`:
 
-```py
+```sh
 dbpath=/root/my/db
 logpath=/root/my/logs/mongodb.log
 port=27017
@@ -52,3 +52,4 @@ auth=true
 * 方法2: 在 Mongo 命令行中关闭:
   * mongo 进入命令行, 在 admin 库中, 身份认证后
   * 关闭 `db.shutdownServer()`
+* 方法3: `mongo admin --eval "db.shutdownServer()"`

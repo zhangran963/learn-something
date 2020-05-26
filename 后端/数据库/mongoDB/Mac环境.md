@@ -29,9 +29,6 @@ port=27017
 
 #指定存储引擎（默认不需要指定）
 #storageEngine=mmapv1
-
-#开启网页日志监控，有这个参数就可以在浏览器上用28017查看监控界面
-# httpinterface=true
 ```
 7. `mongod --config /Users/ran/Public/mongoFile/mongo.conf`: 通过配置文件启动;
 8. `lsof -i:27017`: 查看27017端口是否有 mongodb 服务;
