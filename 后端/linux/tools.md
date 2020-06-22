@@ -55,6 +55,10 @@ grep [搜索内容] [在某某文件中]
 ![grep示例](https://tva1.sinaimg.cn/large/006y8mN6ly1g97qr6wc4ij30sg07ojsw.jpg)
 
 
+### 后台运行命令
+* 使命令在后台运行: `nohup 命令内容 &`
+  * eg1: `nohup yarn start &`
+
 
 ```sh
 #!/bin/bash
