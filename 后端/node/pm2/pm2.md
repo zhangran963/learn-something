@@ -1,6 +1,7 @@
 ### 启动/关闭 服务
 * `pm2 start 服务文件`: 开启服务 app.js
 * `pm2 start 服务文件 --name "自定义名称"`: 开启服务(叫 自定义名称)
+* `pm2 start "npm run build" --name "自定义名称"`: 开启package.json中指定的命令(叫 自定义名称)
 * `pm2 stop 服务名`: 关闭 某个服务;
 * `pm2 restart 服务名`: 重启某个服务;
 * `pm2 delete [服务名|ID]`: 删除服务;
