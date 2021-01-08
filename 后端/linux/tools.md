@@ -5,6 +5,8 @@
 * `find ./src -type f -name "*.js" | xargs grep "abc.png"`: 查找文件(-type f), 名称(-name '*.js'), 包含文本'abc.png'的行内容;
   ![](https://databasing.oss-cn-beijing.aliyuncs.com/markdown/20200601110124.png)
 
+* `-path '*<keyword>*' -prune -o`
+
 
 ### 新建删除等
 * `rm xxx`删除文件

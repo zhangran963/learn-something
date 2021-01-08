@@ -1,13 +1,18 @@
 ### 滚动流畅
+
 * iphone 浏览器中添加`-webkit-overflow-scrolling: touch;`
 
-
 ### 底部横杠
+
 * 类 iphoneX 屏幕
-```html
+
+``` html
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no, viewport-fit=cover" />
 ```
-```css
+
+``` css
+padding-bottom: constant(safe-area-inset-bottom);
+/*兼容 IOS<11.2*/
 padding-bottom: env(safe-area-inset-bottom);
-/* padding-bottom: constant(safe-area-inset-bottom); */
+/*兼容 IOS>11.2*/
 ```
